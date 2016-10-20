@@ -1,0 +1,55 @@
+doctype html
+html(lang="en")
+  head
+    title Jade Intro
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", type="text/css" href="css/bootstrap.css")
+    link(rel="stylesheet", type="text/css" href="css/styles.css")
+
+  body
+    div.container
+      div.row
+        div.col-sm-4
+          h1 SiteName
+
+        ul#topForm.col-sm-8.list-inline.text-right
+          li: a(href=""): div.glyphicon.glyphicon-envelope  Newsletter
+          li: a(href=""): div.glyphicon.glyphicon-leaf  RSS
+          li |
+          li
+            form(role="form").form-inline
+              div.form-group
+                label.sr-only Email Address
+                input(type="email", placeholder="Enter Email").form-control
+                button(type="submit").btn.btn-default Sign Up!
+
+      nav.row
+        ul.nav.nav-tabs
+          li.active: a(href="") Books
+          li: a(href="") Magazines
+          li: a(href="") Comics
+          li: a(href="") Audio Books
+          li: a(href="") Action Figures
+          li: a(href="") Costumes
+
+      div.row.row-padding
+
+        div.col-sm-5
+          include includes/col-main
+
+        div.col-sm-4
+          include includes/col-secondary
+
+        div.col-sm-3
+          include includes/col-tertiary
+
+      div.row
+        .col-sm-12
+          hr.lastBorder
+
+      div.row.footer
+
+      div.row
+        div#copyright.col-sm-12
+          div your Momm 2007, Dios Mio!
