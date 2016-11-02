@@ -6,6 +6,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     link(rel="stylesheet", type="text/css" href="css/bootstrap.css")
     link(rel="stylesheet", type="text/css" href="css/styles.css")
+    include includes/mixins
 
   body
     div.container
@@ -25,6 +26,7 @@ html(lang="en")
                 button(type="submit").btn.btn-default Sign Up!
 
       nav.row
+        div.col-sm-12
         ul.nav.nav-tabs
           li.active: a(href="") Books
           li: a(href="") Magazines
@@ -36,20 +38,27 @@ html(lang="en")
       div.row.row-padding
 
         div.col-sm-5
-          include includes/col-main
+          include includes/col1
 
-        div.col-sm-4
-          include includes/col-secondary
+        div.col-sm-4.col-secondary
+          include includes/col2
 
         div.col-sm-3
-          include includes/col-tertiary
+          include includes/col3
 
       div.row
-        .col-sm-12
+        div.col-sm-12
           hr.lastBorder
 
       div.row.footer
 
+        +footerUnit
+        +footerUnit
+        +footerUnit
+        +footerUnit
+        +footerUnit
+        +footerUnit
+
       div.row
-        div#copyright.col-sm-12
+        div#copyright.col-sm-12.text-right.text-muted
           div your Momm 2007, Dios Mio!

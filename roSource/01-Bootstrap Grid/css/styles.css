@@ -36,3 +36,7 @@ img.flex {
 #copyright {
     padding: 20px 0 40px;
 }
+.media-body {
+    width: auto;
+    height: auto;
+}
